@@ -2,7 +2,7 @@
 
 ## A project from Will, Sammy, Tim and Bailey
 
-`
+```
 As a user
 So that I can use Makersbnb
 I would like make an account
@@ -46,4 +46,4 @@ I need to approve or deny new booking requests.
 As a user, 
 So I can save time by not trying to book spaces that are not available,
 I cannot book spaces where bookings have been confirmed for the dates I need.
-`
+```
