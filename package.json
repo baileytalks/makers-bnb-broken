@@ -1,0 +1,29 @@
+{
+  "name": "makers-bnb",
+  "version": "1.0.0",
+  "description": "## A project from Will, Sammy, Tim and Bailey",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "pg": "^6.1.5",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.30.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baileytalks/makers-bnb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baileytalks/makers-bnb/issues"
+  },
+  "homepage": "https://github.com/baileytalks/makers-bnb#readme"
+}
