@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script data-main='scripts/index' src='scripts/require.js'></script>
+</head>
+<body>
+  <h1>Create account</h1>
+  <form id='newUser' action='/' method='post'>
+    <div>
+      <label for='name'>Name: </label>
+      <input type='text' name='name'>
+      <label for='email'>Email: </label>
+      <input type='text' name='email'>
+      <label for='password'>Password: </label>
+      <input type='password' name='password'>
+      <button id='submitButton' type='submit' value='submit'>submit</button>
+    </div>
+  </form>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <!-- <script src="./node_modules/sequelize/lib/sequelize.js"></script> -->
+
+  <script src='./scripts/index.js'></script>
+  <script src='./scripts/sequelize.js'></script>
+  <script src='./scripts/require.js'></script>
+
+  <script>
+
+    $('form').submit(function(event) {
+      var result = { };
+      $.each($( this ).serializeArray(), function() {
+        result[this.name] = this.value;
+      });
+      event.preventDefault();
+
+      console.log(result.name)
+      console.log(result.email)
+      console.log(result.password);
+
+      var Sequelize = require(['sequelize'], function (sequelize) {
+      });
+
+      var connection = new Sequelize('makersbnb', 'baileykursar', 'elephant', {
+        dialect: 'postgres'
+      });
+
+      var User = connection.define('user', {
+        name:     Sequelize.STRING,
+        email:    Sequelize.STRING,
+        password: Sequelize.STRING
+      });
+
+      connection.sync().then(function () {
+        User.create({
+          name:     'Bailey',
+          email:    'fake2',
+          password: 'fakepassword',
+        });
+        User.save();
+      });
+    });
+
+</script>
+</body>
+</html>

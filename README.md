@@ -1,4 +1,4 @@
-# Makersbnb
+# Makers-bnb
 
 ## A project from Will, Sammy, Tim and Bailey
 
